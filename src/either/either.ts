@@ -55,5 +55,5 @@ export const EitherTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const EitherTransport: Transport = {
-  "effect/either": EitherTransporter,
+  "effect/Either/Either": EitherTransporter,
 };

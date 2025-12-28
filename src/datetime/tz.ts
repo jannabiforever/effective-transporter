@@ -29,7 +29,7 @@ export const TimeZoneOffsetTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const TimeZoneOffsetTransport: Transport = {
-  "effect/datetime/timezone/offset": TimeZoneOffsetTransporter,
+  "effect/DateTime/TimeZone/Offset": TimeZoneOffsetTransporter,
 };
 
 // ================================================================================
@@ -59,5 +59,5 @@ export const TimeZoneNamedTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const TimeZoneNamedTransport: Transport = {
-  "effect/datetime/timezone/named": TimeZoneNamedTransporter,
+  "effect/DateTime/TimeZone/Named": TimeZoneNamedTransporter,
 };

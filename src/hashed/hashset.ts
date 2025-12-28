@@ -27,5 +27,5 @@ export const HashSetTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const HashSetTransport: Transport = {
-  "effect/HashSet": HashSetTransporter,
+  "effect/HashSet/HashSet": HashSetTransporter,
 };

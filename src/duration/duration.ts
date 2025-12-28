@@ -56,5 +56,5 @@ export const DurationTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const DurationTransport: Transport = {
-  "effect/duration": DurationTransporter,
+  "effect/Duration/Duration": DurationTransporter,
 };

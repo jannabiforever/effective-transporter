@@ -35,7 +35,7 @@ export const DateTimeUtcTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const DateTimeUtcTransport: Transport = {
-  "effect/datetime/utc": DateTimeUtcTransporter,
+  "effect/DateTime/DateTime/Utc": DateTimeUtcTransporter,
 };
 
 // ================================================================================
@@ -79,5 +79,5 @@ export const DateTimeZonedTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const DateTimeZonedTransport: Transport = {
-  "effect/datetime/zoned": DateTimeZonedTransporter,
+  "effect/DateTime/DateTime/Zoned": DateTimeZonedTransporter,
 };

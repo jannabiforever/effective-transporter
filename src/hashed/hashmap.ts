@@ -26,5 +26,5 @@ export const HashMapTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const HashMapTransport: Transport = {
-  "effect/HashMap": HashMapTransporter,
+  "effect/HashMap/HashMap": HashMapTransporter,
 };

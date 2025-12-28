@@ -33,5 +33,5 @@ export const BigDecimalTransporter = TransporterWithGuard<
  * @since 0.1.0
  */
 export const BigDecimalTransport: Transport = {
-  "effect/BigDecimal": BigDecimalTransporter,
+  "effect/BigDecimal/BigDecimal": BigDecimalTransporter,
 };
