@@ -1,5 +1,5 @@
 import { Either } from "effect";
-import { TransporterWithGuard } from "./base";
+import { TransporterWithGuard } from "../base";
 import { Transport } from "@sveltejs/kit";
 
 // ================================================================================

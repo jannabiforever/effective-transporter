@@ -1,5 +1,5 @@
 export * from "./option";
-export { EitherTransporter, EitherTransport } from "./either";
+export * from "./either";
 export * from "./datetime";
 export * from "./duration";
 
