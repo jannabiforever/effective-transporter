@@ -1,6 +1,7 @@
 export { OptionTransporter, OptionTransport } from "./option";
 export { EitherTransporter, EitherTransport } from "./either";
 export * from "./datetime";
+export * from "./duration";
 
 import { Transport } from "@sveltejs/kit";
 import { EitherTransport } from "./either";
@@ -11,6 +12,7 @@ import {
   TimeZoneNamedTransport,
   TimeZoneOffsetTransport,
 } from "./datetime";
+import { DurationTransport } from "./duration";
 
 /**
  * A whole set of transporters for the Effect library.
@@ -33,6 +35,7 @@ import {
  * - DateTime.DateTime.Zoned
  * - DateTime.TimeZone.Named
  * - DateTime.TimeZone.Offset
+ * - Duration.Duration
  *
  * @since 0.1.0
  */
@@ -43,4 +46,5 @@ export const EffectTransport: Transport = {
   ...DateTimeZonedTransport,
   ...TimeZoneNamedTransport,
   ...TimeZoneOffsetTransport,
+  ...DurationTransport,
 };
