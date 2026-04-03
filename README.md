@@ -243,6 +243,43 @@ pnpm clean
 
 Removes the `dist/` directory.
 
+## Publishing
+
+This package is automatically published to npm when a version tag is pushed to GitHub. The workflow uses npm provenance with OIDC for enhanced security and supply chain transparency.
+
+### Steps to Publish
+
+1. Update the version in `package.json`:
+   ```bash
+   npm version patch  # or minor, or major
+   ```
+
+2. Push the tag to GitHub:
+   ```bash
+   git push --follow-tags
+   ```
+
+3. GitHub Actions will automatically build and publish to npm with provenance attestation.
+
+### Setup Requirements (One-time)
+
+1. **Create an npm automation token:**
+   - Go to https://www.npmjs.com/settings/YOUR_USERNAME/tokens
+   - Click "Generate New Token" → "Classic Token"
+   - Select "Automation" type (this allows publishing from CI/CD)
+   - Copy the token
+
+2. **Add the token to GitHub:**
+   - Go to repository Settings → Secrets and variables → Actions
+   - Click "New repository secret"
+   - Name: `NPM_TOKEN`
+   - Value: Paste your npm token
+   - Click "Add secret"
+
+### What is Provenance?
+
+The `--provenance` flag in the publish workflow enables npm to cryptographically sign the package with GitHub's OIDC token. This creates a verifiable link between the published package and the exact source code and build process, improving supply chain security. Users can verify the package came from this specific GitHub repository and workflow.
+
 ## Requirements
 
 - Node.js >= 18

@@ -22,6 +22,13 @@ pnpm clean
 ```
 Removes the `dist/` directory.
 
+### Publishing
+Publishing is automated via GitHub Actions with npm provenance (OIDC). To publish:
+1. Update version: `npm version patch|minor|major`
+2. Push with tags: `git push --follow-tags`
+
+The workflow (`.github/workflows/publish.yml`) triggers on version tags (e.g., `v1.0.0`) and automatically publishes to npm with `--provenance` flag, which creates a cryptographic attestation linking the package to the GitHub workflow for supply chain security.
+
 ## Architecture
 
 ### Core Pattern: TransporterWithGuard
